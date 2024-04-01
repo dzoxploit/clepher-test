@@ -2,32 +2,152 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+header {
+  background-color: #d5ebf5;
+  color: rgb(43, 80, 247);
+  padding: 2rem 2rem; /* Mengurangi padding di sisi kiri dan kanan */
+  border-radius: 10px; /* Memberikan sudut yang dibulatkan */
+  text-align: center; /* Posisikan teks di tengah */
+}
+
+/* Mengatur ukuran teks untuk resolusi kecil */
+@media (max-width: 768px) {
+  header {
+    padding: 1.5rem 1rem; /* Mengurangi padding di resolusi kecil */
+    font-size: 1.5rem; /* Mengurangi ukuran teks di resolusi kecil */
+  }
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-basis: calc(30% - 2rem);
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e5e7eb; /* Sesuaikan dengan warna border yang diinginkan */
+  padding: 24px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px; /* Atur jarak antara bagian atas dan bagian bawah footer */
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-links li {
+  margin-right: 16px; /* Atur jarak antara setiap link */
+}
+.logo-item img {
+  width: 60px; /* Ubah sesuai kebutuhan */
+  height: auto; /* Sesuaikan dengan proporsi asli gambar */
+}
+
+.logo-item-DLH img {
+  width: 70px; /* Ubah sesuai kebutuhan */
+  height: auto; /* Sesuaikan dengan proporsi asli gambar */
+}
+.logo-item-USAID img {
+  width: 90px; /* Ubah sesuai kebutuhan */
+  height: auto; /* Sesuaikan dengan proporsi asli gambar */
+  margin-top: 20%;
+}
+.logo-item-CAC img {
+  width: 90px; /* Ubah sesuai kebutuhan */
+  height: auto; /* Sesuaikan dengan proporsi asli gambar */
+  margin-top: 15%;
+}
+.logo-item-WRI img {
+  width: 100px; /* Ubah sesuai kebutuhan */
+  height: auto; /* Sesuaikan dengan proporsi asli gambar */
+  margin-top: 20%;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-logos {
+    margin-bottom: 16px; /* Atur jarak antara bagian atas dan bagian bawah logo pada layar kecil */
+  }
+
+  .footer-links {
+    margin-top: 16px; /* Atur jarak antara bagian atas dan bagian bawah link pada layar kecil */
+  }
+  .logo-item img {
+    width: 50px; /* Ubah sesuai kebutuhan */
+    height: auto; /* Sesuaikan dengan proporsi asli gambar */
   }
 }

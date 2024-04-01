@@ -1,0 +1,44 @@
+.card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Mengubah box shadow */
+  border-radius: 8px; /* Mengubah border radius */
+  overflow: hidden;
+  background-color: #f0f0f0; /* Mengubah warna latar belakang */
+}
+
+.cardHeader {
+  padding: 16px; /* Mengubah padding */
+  background-color: #e0e0e0; /* Mengubah warna latar belakang */
+  font-weight: normal; /* Mengubah bobot font */
+}
+
+.cardContent {
+  padding: 16px; /* Mengubah padding */
+}
+
+.dataItem {
+  margin-bottom: 12px; /* Mengubah margin bottom */
+}
+
+.dataLabel {
+  font-weight: normal; /* Mengubah bobot font */
+}
+
+.dataValue {
+  margin-left: 12px; /* Mengubah margin left */
+}
+
+.statusBar {
+  height: 6px; /* Mengubah tinggi */
+}
+
+.status,
+.statusSedang,
+.statusTidakSehat {
+  background-color: transparent; /* Menghapus warna latar belakang */
+}
+
+.statusText {
+  padding: 12px; /* Mengubah padding */
+  text-align: center;
+  font-weight: normal; /* Mengubah bobot font */
+}

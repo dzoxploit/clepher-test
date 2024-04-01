@@ -1,0 +1,80 @@
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: none;
+}
+
+.navbar-menu.open {
+  display: block;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.sign-in,
+.menu-toggle {
+  margin-left: 20px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-in {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+.menu-toggle {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: block;
+}
+
+.menu-toggle:focus {
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none; /* Hide toggle button on larger screens */
+  }
+}
+
+/* Add styles for open state */
+.navbar-menu.open {
+  display: block;
+}
